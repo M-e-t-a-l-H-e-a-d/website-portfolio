@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-red: #ff0642;
+  --color-blue: #0000ff;
+  ---bg-red-blue-gradient: linear-gradient(
+    31deg,
+    #770d39,
+    #000,
+    #0e0b2c,
+    #0917aa
+  );
+
+  --standart-font-size: clamp(12px, 1.4vw, 16px);
+}
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background: var(---bg-red-blue-gradient) no-repeat;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стили для подстановки при необходимости */
+.text_standartSized {
+  font-size: var(--standart-font-size);
+}
+
+.text_red {
+  color: var(--color-red);
+}
