@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/homePage.css">
     <!-- Иконочные шрифты Fontello-->
     <link rel="stylesheet" href="css/font-icons/fontello-embedded.css">
+
+    <script src="js/index.js" defer></script>
 </head>
 
 <body>
@@ -76,21 +78,28 @@
             </div>
         </div>
     </main>
+    <hr>
     <footer class="footer">
         <div class="container">
-            <div class="socialMedia">
-                <a href="https://vk.com/m__e__t__a__l__h__e__a__d" target="_blank" class="icon"><span
+            <address class="socialMedia">
+                <a href="https://vk.com/m__e__t__a__l__h__e__a__d" target="_blank" class="socialMedia__icon"><span
                         class="icon-vkontakte">
                     </span></a>
-                <a href="#" class="icon"><span class="icon-telegram">
-                    </span></a>
-                <a href="https://github.com/M-e-t-a-l-H-e-a-d" target="_blank" class="icon"><span
+                <button type="button" class="socialMedia__icon buttonCopyTelegramLink"><span class="icon-telegram">
+                    </span></button>
+                <a href="https://github.com/M-e-t-a-l-H-e-a-d" target="_blank" class="socialMedia__icon"><span
                         class="icon-github-circled">
                     </span></a>
-                <a href="mailto:bbldyk@gmail.com" class="icon"><span class="icon-mail">
+                <a href="mailto:bbldyk@gmail.com" class="socialMedia__icon"><span class="icon-mail">
                     </span></a>
-            </div>
+            </address>
         </div>
+        <dialog id="dialogSuccessCopyTelegramLink" class="dialogSuccessCopyTelegramLink">
+            <p>Ссылка на Telegram<br><span class="telegramLink text_red">@M_e_t_a_l_H_e_a_d</span><br>скопирована
+            </p>
+            <form class="dialogSuccessCopyTelegramLink__form" method="dialog"><button
+                    class="buttonCloseDialog">Закрыть</button></form>
+        </dialog>
     </footer>
 </body>
 

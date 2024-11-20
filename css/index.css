@@ -6,6 +6,10 @@
   text-decoration: none;
 }
 
+html {
+  font-size: 16px;
+}
+
 :root {
   --color-white: #ffffff;
   --color-red: #ff0642;
@@ -18,14 +22,13 @@
     #0917aa
   );
 
-  --standart-font-size: clamp(12px, 1.4vw, 16px);
+  --standart-font-size: clamp(0.75rem, 1.4vw, 1rem);
 }
 
 body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 16px;
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.04rem;
   color: var(--color-white);
   background: var(---bg-red-blue-gradient) no-repeat;
 }
