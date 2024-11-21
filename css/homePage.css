@@ -67,6 +67,77 @@
   background-color: var(--color-red);
 }
 
+/* Выпадающее меню навигации по сайту в мобильной версии */
+.dropdown_wrapper {
+  display: none;
+}
+
+.dropdown_button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border: 2px solid var(--color-red);
+  border-radius: 10px;
+  box-shadow: rgba(255, 0, 0, 0.1) 0px 6px 10px 0px,
+    rgba(255, 0, 0, 0.1) 0px 0px 0px 1px;
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  border: 2px solid var(--color-red);
+  border-radius: 10px;
+  box-shadow: rgba(255, 0, 0, 0.1) 0px 6px 10px 0px,
+    rgba(255, 0, 0, 0.1) 0px 0px 0px 1px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.5, 1);
+  margin: 0.25rem auto 0;
+  background-image: var(---bg-red-blue-gradient);
+}
+
+.dropdown .dropdown__link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--color-white);
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.dropdown a:hover {
+  background-color: var(--color-red);
+}
+
+.dropdown a:hover .dropdown__icon {
+  color: var(--color-white);
+}
+
+.dropdown .dropdown__link:last-of-type {
+  border-top: 2px solid var(--color-red);
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
+.arrow {
+  transform: rotate(180deg);
+}
+/* Конец выпадающего меню   */
+
 .welcomeSection_wrapper {
   padding: 100px 0 180px;
   display: flex;
@@ -155,7 +226,7 @@ hr {
   justify-content: center;
 }
 
-.socialMedia__icon {
+.socialMedia__link {
   display: block;
   width: 50px;
   height: 50px;
@@ -183,11 +254,9 @@ hr {
   text-transform: uppercase;
   margin: auto;
   padding: clamp(15px, 2.2vw, 30px);
-  box-sizing: border-box;
   background-image: var(---bg-red-blue-gradient);
   border-radius: 10px;
-  /* transform: filter 0.3s ease;
-  transform: backdrop-filter 0.3s ease; */
+  border: 2px solid var(--color-red);
 }
 
 .dialogSuccessCopyTelegramLink::backdrop {
@@ -251,6 +320,24 @@ hr {
 }
 
 @media (max-width: 580px) {
+  .header__wrapper {
+    padding-bottom: 50px;
+  }
+
+  .nav_wrapper {
+    display: none;
+  }
+
+  .dropdown_wrapper {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    width: calc(100% - 50px);
+    max-width: 500px;
+    font-size: var(--standart-font-size);
+  }
+
   .welcomeSection_wrapper {
     justify-content: normal;
     flex-direction: column;
@@ -266,7 +353,7 @@ hr {
     margin-top: 50px;
   }
 
-  .socialMedia__icon {
+  .socialMedia__link {
     width: 40px;
     height: 40px;
     line-height: 40px;
