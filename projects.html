@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Проекты</title>
+
     <!-- Favicons. Много - для поддержки разных устройств -->
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
@@ -21,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
     <link rel="manifest" href="/js/manifest.webmanifest">
 
-    <link rel="stylesheet" href="css/homePage.css">
+    <link rel="stylesheet" href="css/projectsPage.css">
     <!-- Иконочные шрифты Fontello-->
     <link rel="stylesheet" href="css/font-icons/fontello-embedded.css">
 
@@ -38,12 +39,11 @@
                 <div class="nav_wrapper">
                     <nav class="header__nav">
                         <ul class="nav__list text_standartSized">
-                            <li class="list__item"><a href="#" class="nav__link">Главная</a></li>
+                            <li class="list__item"><a href="index.html" class="nav__link">Главная</a></li>
                             <li class="list__item"><a href="#" class="nav__link">Обо мне</a></li>
                             <li class="list__item"><a href="#" class="nav__link">Навыки</a></li>
-                            <li class="list__item"><a href="projects.html" class="nav__link">Проекты</a></li>
+                            <li class="list__item"><a href="#" class="nav__link">Проекты</a></li>
                             <li class="list__item"><a href="#" class="nav__link">Контакты</a></li>
-                            <!-- Страницы about.html, skills.html, projects.html, contacts.html -->
                         </ul>
                     </nav>
                     <address class="sendAnEmailLink_wrapper text_standartSized">
@@ -85,25 +85,37 @@
     </header>
     <main>
         <div class="container">
-            <div class="mainContent_wrapper welcomeSection_wrapper">
-                <section class="welcomeSection">
-                    <h1 class="welcomeSection__heading">Добро пожаловать на мой сайт!</h1>
-                    <p class="welcomeSection__name"><strong class="strongText">Меня зовут
-                            Феоктистов&nbsp;Сергей</strong></p>
-                    <p class="welcomeSection__typeOfActivity"><strong class="strongText"><span
-                                class="text_red">Я&nbsp;веб-разработчик</span></strong></p>
-                    <div class="welcomeSection__links text_standartSized">
-                        <a href="projects.html" target="_blank" class="portfolioLink">Портфолио<span class="icon-code">
-                            </span></a>
-                        <!-- страница projects.html -->
-                        <a href="#" target="_blank" class="resumeLink">Резюме<span class="icon-address-card-o">
-                            </span></a>
-                        <!-- Ссылка на резюме. Подумать об атрибуте download-->
-                    </div>
-                </section>
-                <div class="photo_wrapper">
-                    <img src="img/myPhoto.jpeg" alt="photo" class="photo">
+            <div class="mainContent_wrapper">
+                <h2 class="mainContent__heading heading-2">Мои проекты</h2>
+                <div class="myProjects">
+                    <section class="project">
+                        <h3 class="project__heading heading-3">Простой двустраничный сайт</h3>
+                        <!-- Должна быть карусель с фото -->
+                        <div class="carousel"></div>
+                        <p class="project__description text_standartSized">Свёрстан по <a
+                                href="https://www.figma.com/design/AOKabCJEdEqr9ZZEaJ0IMS/html%2Fcss-(Copy)?node-id=0-1&node-type=canvas&t=PfmQBNNoPIKA3CG8-0"
+                                target="_blank" class="text_red linkToLayout">макету
+                                Figma</a>.
+                            Использовались технологии <span class="text_red">HTML</span> и <span
+                                class="text_red">CSS</span>. HTML-теги старался именовать согласно
+                            методологии <span class="text_red">БЭМ</span>.
+                            Вёрстка адаптивная, семантика тегов соблюдена, сайт прошёл валидацию W3C.</p>
+                        <p> Внимание! Так как сайт размещён на бесплатном хостинге, он работает по протоколу HTTP.
+                            Браузер может предупреждать что сайт не безопасен. Не бойтесь!</p>
+                        <ul class="project__stackList">
+                            <li class="stackItem">HTML</li>
+                            <li class="stackItem">CSS</li>
+                            <li class="stackItem">BEM</li>
+                        </ul>
+                        <nav class="project__nav">
+                            <a href="http://bbldykir.beget.tech" target="_blank">Ссылка на хостинг</a>
+                            <a href="https://github.com/M-e-t-a-l-H-e-a-d/simple-little-website" target="_blank">Ссылка
+                                на проект в гитхаб</a>
+                        </nav>
+
+                    </section>
                 </div>
+
             </div>
         </div>
     </main>

@@ -34,9 +34,21 @@ body {
   background: var(---bg-red-blue-gradient) no-repeat;
 }
 
+.heading-2 {
+  font-size: 1.5rem;
+}
+
+.heading-3 {
+  font-size: 1.2rem;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.mainContent_wrapper {
+  padding: 6.25rem 0 11.25rem;
 }
 
 /* Стили для подстановки при необходимости */
@@ -46,4 +58,24 @@ body {
 
 .text_red {
   color: var(--color-red);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    margin: 0 2rem;
+  }
+
+  .mainContent_wrapper {
+    padding: 5rem 0 9rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .container {
+    margin: 0 1rem;
+  }
+
+  .mainContent_wrapper {
+    padding: 2.5rem 0 4.5rem;
+  }
 }

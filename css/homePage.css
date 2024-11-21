@@ -4,7 +4,6 @@
 
 /* Стили главной страницы*/
 .welcomeSection_wrapper {
-  padding: 100px 0 180px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,26 +76,6 @@
 .portfolioLink:hover,
 .resumeLink:hover {
   background-color: var(--color-red);
-}
-
-@media (max-width: 1200px) {
-  .container {
-    margin: 0 32px;
-  }
-
-  .welcomeSection_wrapper {
-    padding: 80px 0 130px;
-  }
-}
-
-@media (max-width: 780px) {
-  .container {
-    margin: 0 16px;
-  }
-
-  .welcomeSection_wrapper {
-    padding: 40px 0 80px;
-  }
 }
 
 @media (max-width: 580px) {

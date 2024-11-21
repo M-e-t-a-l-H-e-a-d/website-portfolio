@@ -1,0 +1,21 @@
+@import url(index.css);
+@import url(header.css);
+@import url(footer.css);
+
+.mainContent__heading {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.myProjects {
+  margin-top: clamp(22px, 5vw, 44px);
+}
+
+.project__nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project__nav a {
+  color: red;
+}
