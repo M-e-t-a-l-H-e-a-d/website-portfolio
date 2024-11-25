@@ -12,11 +12,45 @@
   margin-top: clamp(22px, 5vw, 44px);
 }
 
+.project__description {
+  margin: clamp(15px, 2.2vw, 30px) 0;
+}
+
+.project__stackListHeading {
+  margin-bottom: 10px;
+}
+
+.project__stackList {
+  list-style-position: inside;
+}
+
 .project__nav {
   display: flex;
   justify-content: space-around;
+  margin-top: clamp(15px, 2.2vw, 30px);
 }
 
 .project__nav a {
-  color: red;
+  color: var(--color-red);
+  transition: color 0.3s ease;
+}
+
+.project__nav a:hover {
+  color: var(--color-white);
+}
+
+@media (max-width: 580px) {
+  .project__heading {
+    text-align: center;
+  }
+
+  .project__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project__nav a:nth-of-type(n + 2) {
+    margin-top: 10px;
+  }
 }
