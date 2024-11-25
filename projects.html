@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/font-icons/fontello-embedded.css">
 
     <script src="js/index.js" defer></script>
+    <script src="js/projectsSlider.js" defer></script>
 </head>
 
 <body>
@@ -59,7 +60,7 @@
                     </button>
 
                     <nav class="dropdown" id="dropdown">
-                        <a href="#" class="dropdown__link">
+                        <a href="index.html" class="dropdown__link">
                             Главная
                             <span class="icon-home dropdown__icon"></span>
                         </a>
@@ -69,7 +70,7 @@
                         <a href="#" class="dropdown__link">
                             Навыки<span class="icon-linux dropdown__icon"></span>
                         </a>
-                        <a href="projects.html" class="dropdown__link">
+                        <a href="#" class="dropdown__link">
                             Проекты<span class="icon-code dropdown__icon"></span>
                         </a>
                         <a href="#" class="dropdown__link">
@@ -90,8 +91,56 @@
                 <div class="myProjects">
                     <section class="project">
                         <h3 class="project__heading heading-3">Простой двустраничный сайт</h3>
-                        <!-- Должна быть карусель с фото -->
-                        <div class="carousel"></div>
+                        <!-- Слайдер с фото проекта -->
+                        <div class="slider" role="region" aria-label="Скриншоты проекта">
+                            <div class="slider__controls" role="group" aria-label="Управление слайдами">
+                                <button class="controls__button button_radio" type="button" aria-current="true"
+                                    aria-label="Показать 1 из 4">
+                                </button>
+                                <button class="controls__button button_radio" type="button"
+                                    aria-label="Показать 2 из 4">
+                                </button>
+                                <button class="controls__button button_radio" type="button"
+                                    aria-label="Показать 3 из 4">
+                                </button>
+                                <button class="controls__button button_radio" type="button"
+                                    aria-label="Показать 4 из 4">
+                                </button>
+
+                                <button aria-label="Предыдущий" type="button"
+                                    class="controls__button controls__button_prev">
+                                </button>
+                                <button aria-label="Следующий" type="button"
+                                    class="controls__button controls_button_next">
+                                </button>
+                            </div>
+
+                            <div class="slider__slides" aria-live="polite">
+                                <div class="slide" role="group" aria-labelledby="slide1-label" id="sliderItem1">
+                                    <img class="slide__img" src="img/projectsSlider/simple-two-pages-site/STPS_1.png"
+                                        alt="Шапка главной страницы сайта.">
+                                    <h4 id="slide1-label" class="slide__heading heading-4">Шапка главной страницы сайта
+                                    </h4>
+                                </div>
+                                <div class="slide" role="group" aria-labelledby="slide2-label" id="sliderItem2">
+                                    <img class="slide__img" src="img/projectsSlider/simple-two-pages-site/STPS_2.png"
+                                        alt="Главная страница сайта.">
+                                    <h4 id="slide2-label" class="slide__heading heading-4">Тоже главная страница</h4>
+                                </div>
+                                <div class="slide" role="group" aria-labelledby="slide3-label" id="sliderItem3">
+                                    <img class="slide__img" src="img/projectsSlider/simple-two-pages-site/STPS_3.png"
+                                        alt="Страница &quot;Контакты&quot;.">
+                                    <h4 id="slide3-label" class="slide__heading heading-4">Страница &quot;Контакты&quot;
+                                    </h4>
+                                </div>
+                                <div class="slide" role="group" aria-labelledby="slide4-label" id="sliderItem4">
+                                    <img class="slide__img" src="img/projectsSlider/simple-two-pages-site/STPS_4.png"
+                                        alt="Несколько абстрактных роз в виде пятен алого цвета.">
+                                    <h4 id="slide4-label" class="slide__heading heading-4">Подвал сайта</h4>
+                                </div>
+                            </div>
+                        </div>
+
                         <p class="project__description text_standartSized">Свёрстан по <a
                                 href="https://www.figma.com/design/AOKabCJEdEqr9ZZEaJ0IMS/html%2Fcss-(Copy)?node-id=0-1&node-type=canvas&t=PfmQBNNoPIKA3CG8-0"
                                 target="_blank" class="text_red linkToLayout">макету

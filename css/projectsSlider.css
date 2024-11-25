@@ -1,0 +1,103 @@
+.slider__controls {
+  margin-block: clamp(10px, 2vw, 15px);
+}
+
+.controls__button {
+  cursor: pointer;
+  user-select: none;
+}
+
+.button_radio {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  inline-size: clamp(10px, 2vw, 15px);
+  block-size: clamp(10px, 2vw, 15px);
+  border-radius: 50%;
+  border: 1px solid var(--color-red);
+}
+
+.button_radio + .button_radio {
+  margin-inline-start: clamp(7px, 1.3vw, 12px);
+}
+
+.button_radio.active {
+  background-color: var(--color-red);
+  pointer-events: none;
+}
+
+.button_radio:focus-visible {
+  outline: 3px solid white;
+  outline-offset: -1px;
+}
+
+.controls__button_prev,
+.controls_button_next {
+  position: absolute;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  border: none;
+  inline-size: clamp(15px, 2.2vw, 30px);
+  block-size: clamp(20px, 3vw, 40px);
+  background-color: transparent;
+  background-image: url(../img/projectsSlider/arrow-left.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: var(--color-white);
+}
+
+.controls__button_prev[aria-disabled="true"],
+.controls_button_next[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.controls__button_prev:hover,
+.controls_button_next:hover {
+  color: var(--color-red);
+}
+
+.controls__button_prev {
+  inset-inline-start: clamp(-50px, -5vw, -25px);
+}
+
+.controls_button_next {
+  inset-inline-end: clamp(-50px, -5vw, -25px);
+  transform: translateY(-50%) rotateY(180deg);
+  transform-origin: center;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-inline-size: 610px;
+  inline-size: calc(100% - 50px);
+  position: relative;
+  margin: 0 auto;
+}
+
+.slider__slides {
+  inline-size: 100%;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide--active {
+  display: block;
+}
+
+.slide__img {
+  display: block;
+  inline-size: 100%;
+  max-block-size: 300px;
+  object-fit: contain;
+  aspect-ratio: auto 2/1;
+}
+
+.slide__heading {
+  margin-top: clamp(10px, 2vw, 15px);
+}
