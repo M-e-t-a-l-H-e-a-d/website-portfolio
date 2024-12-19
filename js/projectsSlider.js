@@ -1,3 +1,5 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".slider");
   const slides = slider.querySelectorAll(".slide");

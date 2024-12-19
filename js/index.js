@@ -1,3 +1,5 @@
+"use strict";
+
 // Выпадающее меню навигации по сайту в мобильной версии
 const dropdownBtn = document.getElementById("dropdown_button");
 const dropdownMenu = document.getElementById("dropdown");
